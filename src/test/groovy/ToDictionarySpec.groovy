@@ -89,4 +89,18 @@ class ToDictionarySpec extends Specification {
         result.size() == 1
         result.get("a") == ""
     }
+
+    def "Check that toDictionary works as intended with input 'a=1;;b=2'"() {
+        given: "A String input"
+        String input = "a=1;;b=2"
+
+        when: "Calling toDictionary"
+        HashMap<String, String> result = ToDictionary.toDictionary(input)
+
+        then: "Expect result to have 1 entry with key 'a' and value ''"
+        result.size() == 2
+        result.get("a") == "1"
+        result.get("b") == "2"
+    }
+
 }

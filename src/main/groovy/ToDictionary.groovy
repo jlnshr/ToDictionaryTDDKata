@@ -10,6 +10,9 @@ class ToDictionary {
         }
         String[] inputArr = input.split(";")
         for (String s : inputArr) {
+            if(s.isEmpty()){
+                continue
+            }
             def (String key, String value) = extractKeyAndValue(s)
             dictionary.put(key, value)
         }
