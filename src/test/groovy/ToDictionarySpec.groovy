@@ -2,7 +2,7 @@ import spock.lang.Specification
 
 class ToDictionarySpec extends Specification {
 
-    def "Check thath toDictionary works with empty String"() {
+    def "Check that toDictionary works with empty String"() {
         given: "A String input"
         String input = ""
 
